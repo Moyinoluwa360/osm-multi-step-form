@@ -78,6 +78,9 @@ body{
     color: white;
     font-weight: bolder;
 }
+.bar:first-of-type .num{
+    background-color: var(--Light-blue);
+}
 .step{
     font-size: 16px;
     font-weight: lighter;
@@ -122,7 +125,6 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    display: none;
 }
 .btn{
     height: 75%;
@@ -137,12 +139,14 @@ body{
     justify-content: center;
     border-radius: 10px;
     color: var(--Alabaster);
+    justify-self: flex-end;
 }
 .nextBtn:hover{
     background-color: var(--Purplish-blue);
 }
 .goBackBtn{
     color: var(--Cool-gray);
+    display: none;
 }
 .goBackBtn:hover{
     color: var(--Marine-blue);
@@ -153,15 +157,15 @@ body{
     height: 80%;
 }
 /* form element */
-form{
-    gap: 50px;
-    display: none;
+.form-ele:first-of-type{
+    margin-top: 50px;
 }
 .form-ele{
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 7px;
+    box-sizing: border-box;
 }
 label{
     width: 100%;
@@ -174,7 +178,7 @@ label{
 .form-ele input{
     all: unset;
     margin: 0%;
-    width: 98.5%;
+    width: 94%;
     height: 50px;
     border-radius: 10px;
     border: solid var(--Light-gray);
@@ -188,7 +192,7 @@ input:focus{
 }
 .plans{
     display: flex;
-    height: 32%;
+    min-height: 32%;
     gap: 10px;
     margin: 40px 0 40px 0;
 }
@@ -196,7 +200,6 @@ input:focus{
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     border: solid var(--Light-gray);
     border-width: 1px;
     height: 100%;
@@ -207,6 +210,13 @@ input:focus{
 .plan:hover{
     border-color: var(--Purplish-blue);
 }
+.plan-info{
+    min-height: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 70px;
+}
 .plan img{
     height: 50px;
     width: 50px;
@@ -215,7 +225,6 @@ input:focus{
     font-weight: bolder;
     font-size: 18px;
     color: var(--Marine-blue);
-    margin-bottom: 5px;
 }
 .plan-price{
     font-weight: lighter;
@@ -258,6 +267,7 @@ input:focus{
     justify-content: center;
     align-items: center;
     gap: 5%;
+    font-weight: bolder;
 }
 
 .toggle-checkbox:checked + .toggle-label {
@@ -266,6 +276,9 @@ input:focus{
 
 .toggle-checkbox:checked + .toggle-label::after {
     left: 27px;
+}
+.monthly{
+    color: var(--Marine-blue);
 }
 .adds-ons{
     display: none;
@@ -407,6 +420,7 @@ input:focus{
     justify-content: center;
     align-items: center;
     padding: 0 15% 0 15%;
+    display: none;
 }
 .thanks-div img{
     height: 100px;
